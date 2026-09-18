@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Landing Page Vertical Slider</title>
+    <meta
+      name="description"
+      content="An immersive North Atlantic wildlife expedition landing page with full-screen vertical slider, interactive colony field guide, acoustic audio synthesizer, and expedition booking."
+    />
+    <meta property="og:title" content="Landing Page Vertical Slider" />
+    <meta
+      property="og:description"
+      content="An immersive North Atlantic wildlife expedition landing page with full-screen vertical slider, interactive colony field guide, acoustic audio synthesizer, and expedition booking."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../scss/main.scss" />
+  </head>
+  <body>
+    <!-- Top Global Header -->
+    <header id="headerWrapper" class="collapse-header">
+      <div class="header-content">
+        <a
+          href="#slide1"
+          class="brand-logo"
+          id="brandLogoLink"
+          data-target-slide="1"
+        >
+          <span class="logo-mark">
+            <i class="fa fa-compass" aria-hidden="true"></i>
+          </span>
+          <div class="brand-text">
+            <span class="brand-title">FRATERCULA</span>
+            <span class="brand-sub">North Atlantic Seabird Sanctuary</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" id="desktopNav">
+          <button class="nav-item active" id="navLink1" data-target-slide="1">
+            <span class="nav-num">01</span>
+            <span class="nav-label">Overview</span>
+          </button>
+          <button class="nav-item" id="navLink2" data-target-slide="2">
+            <span class="nav-num">02</span>
+            <span class="nav-label">Biology</span>
+          </button>
+          <button class="nav-item" id="navLink3" data-target-slide="3">
+            <span class="nav-num">03</span>
+            <span class="nav-label">Sanctuary</span>
+          </button>
+          <button class="nav-item" id="navLink4" data-target-slide="4">
+            <span class="nav-num">04</span>
+            <span class="nav-label">Expeditions</span>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            id="soundToggleBtn"
+            class="header-btn sound-btn"
+            type="button"
+            title="Toggle Coastal Ocean & Colony Sound"
+          >
+            <i id="soundIcon" class="fa fa-volume-off" aria-hidden="true"></i>
+            <span id="soundLabel" class="sound-text">Ambient: Off</span>
+          </button>
+
+          <button
+            id="openFieldGuideBtn"
+            class="header-btn guide-btn"
+            type="button"
+            title="Open Interactive Species Guide"
+          >
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span class="btn-text">Field Guide</span>
+          </button>
+
+          <button
+            id="headerCtaBtn"
+            class="header-btn cta-btn"
+            type="button"
+            data-target-slide="4"
+          >
+            <span>Book Expedition</span>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <div
+            id="menuToggleBtn"
+            class="button-container"
+            role="button"
+            aria-label="Toggle Navigation Menu"
+          >
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collapsible Mobile Drawer Navigation -->
+      <div id="mobileMenuDrawer" class="menu">
+        <div class="drawer-container">
+          <div class="drawer-header">
+            <span class="drawer-brand">Sanctuary Navigation</span>
+            <span class="drawer-status"
+              ><i class="fa fa-circle text-emerald"></i> Expedition Season
+              2026</span
+            >
+          </div>
+          <nav class="collapse-nav" id="collapseNav">
+            <button
+              class="mobile-nav-link active"
+              data-target-slide="1"
+              id="mobileLink1"
+            >
+              <span class="m-num">01</span>
+              <span class="m-title">Expedition Overview</span>
+              <span class="m-desc">Nomads of the North Atlantic</span>
+            </button>
+            <button
+              class="mobile-nav-link"
+              data-target-slide="2"
+              id="mobileLink2"
+            >
+              <span class="m-num">02</span>
+              <span class="m-title">Species Biology</span>
+              <span class="m-desc">Evolutionary ocean diving adaptations</span>
+            </button>
+            <button
+              class="mobile-nav-link"
+              data-target-slide="3"
+              id="mobileLink3"
+            >
+              <span class="m-num">03</span>
+              <span class="m-title">Sanctuary Conservation</span>
+              <span class="m-desc">Active telemetry & burrow monitoring</span>
+            </button>
+            <button
+              class="mobile-nav-link"
+              data-target-slide="4"
+              id="mobileLink4"
+            >
+              <span class="m-num">04</span>
+              <span class="m-title">Field Expeditions & Inquiries</span>
+              <span class="m-desc">Coastal observation voyages & stations</span>
+            </button>
+          </nav>
+          <div class="drawer-footer">
+            <div class="drawer-station-info">
+              <p>
+                <i class="fa fa-map-pin"></i> Látrabjarg Field Station: 65°30'N,
+                24°31'W
+              </p>
+              <p>
+                <i class="fa fa-rss"></i> Radio VHF Monitoring: Marine Ch 16 /
+                72
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Left Navigation Bar with Numeric Indicator and Hover Tooltips -->
+    <aside
+      class="left-nav-panel"
+      id="leftNavPanel"
+      aria-label="Slide Indicator"
+    >
+      <div class="navigation-container">
+        <div class="nav-indicator-line"></div>
+        <span class="navigator-wrapper">
+          <button
+            class="navigator dot selected"
+            data-key="1"
+            id="navDot1"
+            aria-label="Slide 1: Overview"
+          >
+            <span class="nav-tooltip">01 • Expedition Overview</span>
+          </button>
+        </span>
+        <span class="navigator-wrapper">
+          <button
+            class="navigator dot"
+            data-key="2"
+            id="navDot2"
+            aria-label="Slide 2: Biology"
+          >
+            <span class="nav-tooltip">02 • Species Biology</span>
+          </button>
+        </span>
+        <span class="navigator-wrapper">
+          <button
+            class="navigator dot"
+            data-key="3"
+            id="navDot3"
+            aria-label="Slide 3: Conservation"
+          >
+            <span class="nav-tooltip">03 • Sanctuary Conservation</span>
+          </button>
+        </span>
+        <span class="navigator-wrapper">
+          <button
+            class="navigator dot"
+            data-key="4"
+            id="navDot4"
+            aria-label="Slide 4: Expeditions"
+          >
+            <span class="nav-tooltip">04 • Field Expeditions</span>
+          </button>
+        </span>
+      </div>
+    </aside>
+
+    <!-- Main Full-Screen Vertical Slider -->
+    <main id="main-container" class="main-slider">
+      <div class="slider-wrapper" id="sliderWrapper">
+        <!-- Slide 1: Hero & Overview -->
+        <article id="slide1" class="slider-content current" data-key="1">
+          <div class="slide-overlay"></div>
+          <section class="content-wrapper hero-wrapper">
+            <div class="hero-badge-container">
+              <span class="badge-pill">
+                <i class="fa fa-compass" aria-hidden="true"></i> Field
+                Expedition Archive 2026
+              </span>
+              <span class="badge-sub">North Atlantic Seabird Initiative</span>
+            </div>
+
+            <h1 class="hero-title" id="heroMainHeading">
+              Nomads of the Open Ocean:
+              <span class="highlight-serif">The Atlantic Puffin</span>
+            </h1>
+
+            <p class="hero-lead">
+              For eight turbulent winter months, the Atlantic Puffin
+              <em>(Fratercula arctica)</em> dwells entirely upon the freezing
+              waves of the North Atlantic without touching land. Each spring,
+              guided by ancient ancestral instinct, hundreds of thousands return
+              to the towering basalt sea cliffs of Iceland, Scotland, and the
+              Faroe Islands to rear their young.
+            </p>
+
+            <div class="hero-stats-row">
+              <div class="stat-card" id="statCardDepth">
+                <span class="stat-value">60<small>m</small></span>
+                <span class="stat-label">Maximum Dive Depth</span>
+                <span class="stat-detail">Undersea hydrofoil propulsion</span>
+              </div>
+              <div class="stat-card" id="statCardWings">
+                <span class="stat-value">400<small>+</small></span>
+                <span class="stat-label">Wingbeats / Min</span>
+                <span class="stat-detail">Rapid low-altitude flight</span>
+              </div>
+              <div class="stat-card" id="statCardSpeed">
+                <span class="stat-value">88<small>km/h</small></span>
+                <span class="stat-label">Flight Airspeed</span>
+                <span class="stat-detail">Skimming stormy sea crests</span>
+              </div>
+              <div class="stat-card" id="statCardLifespan">
+                <span class="stat-value">25<small>+ yrs</small></span>
+                <span class="stat-label">Wild Lifespan</span>
+                <span class="stat-detail">Monogamous lifelong mates</span>
+              </div>
+            </div>
+
+            <div class="hero-cta-group">
+              <button
+                class="btn-primary"
+                id="exploreColonyBtn"
+                type="button"
+                data-target-slide="2"
+              >
+                <span>Explore Colony Biology</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+              <button class="btn-secondary" id="heroGuideTrigger" type="button">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <span>Species Field Guide</span>
+              </button>
+              <button
+                class="btn-ambient-listen"
+                id="heroSoundTrigger"
+                type="button"
+              >
+                <i class="fa fa-headphones" aria-hidden="true"></i>
+                <span>Hear Oceanic Colony Ambience</span>
+              </button>
+            </div>
+          </section>
+        </article>
+
+        <!-- Slide 2: Species Biology & Adaptations -->
+        <article id="slide2" class="slider-content next" data-key="2">
+          <div class="slide-overlay"></div>
+          <section class="content-wrapper biology-wrapper">
+            <div class="section-badge-container">
+              <span class="badge-pill">
+                <i class="fa fa-feather" aria-hidden="true"></i> Evolutionary
+                Morphology
+              </span>
+              <span class="badge-sub">Species Profile & Adaptations</span>
+            </div>
+
+            <h2 class="section-title">
+              Life on the Precipice:
+              <span class="highlight-serif">Avian Ocean Engineering</span>
+            </h2>
+
+            <p class="section-lead">
+              Often called the "clown of the ocean" or "sea parrot," the
+              Atlantic Puffin is an astonishingly engineered pelagic seabird
+              whose body is tuned to survive brutal Arctic blizzards, shearwater
+              gales, and deep saltwater dives.
+            </p>
+
+            <div class="features-bento">
+              <div class="bento-card" id="bentoCardWings">
+                <div class="card-icon-wrap">
+                  <i class="fa fa-tint" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title">Hydrofoil Underwater Wings</h3>
+                <p class="card-desc">
+                  Unlike gulls that soar effortlessly on thermals, puffin wings
+                  are short, compact, and dense. In the air they must beat up to
+                  400 times per minute, but underwater they convert into
+                  hydrodynamic flippers—allowing them to effortlessly pursue
+                  agile sandeels down to 60 meters.
+                </p>
+                <div class="card-meta">
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> 60m Dive Limit</span
+                  >
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> High Oxygen Capacity</span
+                  >
+                </div>
+              </div>
+
+              <div class="bento-card" id="bentoCardBeak">
+                <div class="card-icon-wrap">
+                  <i class="fa fa-cutlery" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title">The Serrated Bill Mechanism</h3>
+                <p class="card-desc">
+                  The iconic vibrant striped beak develops its brilliance during
+                  spring breeding and sheds after nesting. Crucially, the upper
+                  palate and tongue are covered in backward-angled fleshy
+                  serrations, enabling a parent puffin to clamp multiple
+                  slippery fish securely while continuing to catch more.
+                </p>
+                <div class="card-meta">
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> Record: 62 Fish in One
+                    Beak</span
+                  >
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> Fluorescent UV Markings</span
+                  >
+                </div>
+              </div>
+
+              <div class="bento-card" id="bentoCardBurrow">
+                <div class="card-icon-wrap">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                <h3 class="card-title">Turf Burrows & Monogamy</h3>
+                <p class="card-desc">
+                  Puffins pair for life and return to the exact same burrow
+                  every April. Using sharp foot claws and strong beaks, they
+                  excavate tunnels up to 1.5 meters deep into the turf along
+                  cliff edges. Both parents take equal shifts brooding their
+                  single egg and fledging the nocturnal chick ("puffling").
+                </p>
+                <div class="card-meta">
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> 1 Egg Per Season</span
+                  >
+                  <span class="tag"
+                    ><i class="fa fa-check"></i> 40-Day Incubation</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Quick Fact Strip -->
+            <div class="fact-accordion-wrap">
+              <span class="fact-intro"
+                ><i class="fa fa-lightbulb-o"></i> Tap for verified field
+                insights:</span
+              >
+              <div class="fact-pill-row">
+                <button class="fact-pill" type="button" data-fact="salt">
+                  <span>Drinking Seawater</span>
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <button class="fact-pill" type="button" data-fact="nocturnal">
+                  <span>Nocturnal Fledging</span>
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <button class="fact-pill" type="button" data-fact="eyes">
+                  <span>Triangular Eye Markings</span>
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <button class="fact-pill" type="button" data-fact="molt">
+                  <span>Winter Flightless Molt</span>
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+              </div>
+              <div
+                id="factDisplayCard"
+                class="fact-display-box"
+                style="display: none"
+              >
+                <p id="factDisplayText"></p>
+              </div>
+            </div>
+
+            <div class="slide-nav-actions">
+              <button class="btn-primary" type="button" data-target-slide="3">
+                <span>View Sanctuary Conservation</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </section>
+        </article>
+
+        <!-- Slide 3: Habitat Conservation & Research Sanctuary -->
+        <article id="slide3" class="slider-content next" data-key="3">
+          <div class="slide-overlay"></div>
+          <section class="content-wrapper conservation-wrapper">
+            <div class="section-badge-container">
+              <span class="badge-pill">
+                <i class="fa fa-shield" aria-hidden="true"></i> Active Field
+                Stewardship
+              </span>
+              <span class="badge-sub">Conservation Science & Monitoring</span>
+            </div>
+
+            <h2 class="section-title">
+              Guardians of the Precipice:
+              <span class="highlight-serif">Coastal Sanctuary Science</span>
+            </h2>
+
+            <p class="section-lead">
+              Changing sea-surface temperatures in the North Atlantic are
+              altering the timing and depth of sandeel shoals. Through satellite
+              telemetry, infrared burrow cameras, and predator-free cliff
+              zoning, our field researchers track and protect vulnerable
+              breeding colonies.
+            </p>
+
+            <div class="conservation-grid">
+              <!-- Left: Live Sanctuary Metrics -->
+              <div class="conservation-metrics-panel">
+                <h3 class="panel-heading">
+                  <i class="fa fa-line-chart"></i> Colony Telemetry Status
+                </h3>
+                <div class="metric-tiles">
+                  <div class="metric-tile" id="metricBurrows">
+                    <div class="metric-number">1,480<small>+</small></div>
+                    <div class="metric-label">Monitored Nest Burrows</div>
+                    <div class="metric-status text-emerald">
+                      <i class="fa fa-check-circle"></i> Telemetry Active
+                    </div>
+                  </div>
+                  <div class="metric-tile" id="metricSuccess">
+                    <div class="metric-number">94.2<small>%</small></div>
+                    <div class="metric-label">2025 Fledging Success</div>
+                    <div class="metric-status text-emerald">
+                      <i class="fa fa-arrow-up"></i> +3.1% YoY
+                    </div>
+                  </div>
+                  <div class="metric-tile" id="metricIslands">
+                    <div class="metric-number">18</div>
+                    <div class="metric-label">Island Reserves Protected</div>
+                    <div class="metric-status text-emerald">
+                      <i class="fa fa-lock"></i> Strict Sanctuary
+                    </div>
+                  </div>
+                  <div class="metric-tile" id="metricHectares">
+                    <div class="metric-number">42,500</div>
+                    <div class="metric-label">Hectares Marine Safe Zone</div>
+                    <div class="metric-status text-emerald">
+                      <i class="fa fa-globe"></i> No-Trawl Waters
+                    </div>
+                  </div>
+                </div>
+
+                <div class="conservation-initiatives-list">
+                  <div class="init-item">
+                    <i class="fa fa-satellite text-amber"></i>
+                    <div>
+                      <strong>Miniaturized Solar GPS Tags:</strong>
+                      <span
+                        >Tracks foraging flight radiuses up to 50 km from cliff
+                        burrows.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="init-item">
+                    <i class="fa fa-camera text-amber"></i>
+                    <div>
+                      <strong>Deep-Burrow Infrared Cameras:</strong>
+                      <span
+                        >Continuous non-invasive monitoring of egg incubation
+                        and chick growth.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="init-item">
+                    <i class="fa fa-heartbeat text-amber"></i>
+                    <div>
+                      <strong>Annual Puffling Rescue Patrols:</strong>
+                      <span
+                        >Volunteers guide disoriented fledglings safely from
+                        harbor lights out to sea.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Interactive Nest Sponsorship Calculator -->
+              <div class="conservation-calculator-panel">
+                <h3 class="panel-heading">
+                  <i class="fa fa-calculator"></i> Burrow Protection Calculator
+                </h3>
+                <p class="calc-sub">
+                  Calculate how your direct contribution powers field telemetry
+                  and restores cliff nesting slopes.
+                </p>
+
+                <div class="calc-form-group">
+                  <label for="sponsorTierSelect"
+                    >Select Sponsorship Scope:</label
+                  >
+                  <select id="sponsorTierSelect" class="calc-select">
+                    <option value="1">1 Nesting Burrow • €35 / season</option>
+                    <option value="3" selected>
+                      3 Colony Burrows • €95 / season
+                    </option>
+                    <option value="5">
+                      Colony Sector (5 Burrows) • €150 / season
+                    </option>
+                    <option value="10">
+                      Full Sea Stack Sanctuary Zone • €300 / season
+                    </option>
+                  </select>
+                </div>
+
+                <div class="calc-form-group">
+                  <label>Telemetry & Equipment Enhancements:</label>
+                  <div class="calc-checkbox-group">
+                    <label class="checkbox-container">
+                      <input type="checkbox" id="checkGps" checked />
+                      <span>Include Solar GPS Ring Tagging</span>
+                    </label>
+                    <label class="checkbox-container">
+                      <input type="checkbox" id="checkInfrared" checked />
+                      <span>Include Night-Vision Burrow Cam Access</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="calc-result-card" id="calcResultCard">
+                  <div class="result-highlight">
+                    <span class="result-label"
+                      >Direct Conservation Impact:</span
+                    >
+                    <h4 id="calcImpactSummary">
+                      Protects 3 active nesting burrows, supplies 1 solar GPS
+                      ring, and preserves 90m² of cliffside vegetation.
+                    </h4>
+                  </div>
+                  <div class="result-stats">
+                    <div class="r-stat">
+                      <span class="r-val" id="calcChicksSaved">3 to 5</span>
+                      <span class="r-desc">Pufflings Fledged</span>
+                    </div>
+                    <div class="r-stat">
+                      <span class="r-val" id="calcAreaProtected">90 m²</span>
+                      <span class="r-desc">Basalt Turf Shielded</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="btn-primary w-full"
+                  id="sponsorPledgeBtn"
+                  type="button"
+                >
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <span>Pledge Colony Sanctuary Support</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="slide-nav-actions">
+              <button class="btn-primary" type="button" data-target-slide="4">
+                <span>Expeditions & Inquiries</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </section>
+        </article>
+
+        <!-- Slide 4: Field Expeditions & Contact -->
+        <article id="slide4" class="slider-content next" data-key="4">
+          <div class="slide-overlay"></div>
+          <section class="content-wrapper expedition-wrapper">
+            <div class="section-badge-container">
+              <span class="badge-pill">
+                <i class="fa fa-compass" aria-hidden="true"></i> Ethical
+                Wildlife Encounters
+              </span>
+              <span class="badge-sub"
+                >Guided Field Journeys & Observatory Inquiries</span
+              >
+            </div>
+
+            <h2 class="section-title">
+              Witness the Sea Stacks:
+              <span class="highlight-serif">Join the 2026 Expeditions</span>
+            </h2>
+
+            <p class="section-lead">
+              Accompanied by licensed marine ornithologists, our small-group
+              voyages offer rare, non-disruptive observation along the remote
+              sea cliffs of the North Atlantic.
+            </p>
+
+            <div class="expedition-split">
+              <!-- Left: Expedition Booking & Inquiry Form -->
+              <div class="expedition-form-card">
+                <div class="form-header">
+                  <h3>
+                    <i class="fa fa-calendar-check-o"></i> Reserve Expedition or
+                    Field Inquiry
+                  </h3>
+                  <p>
+                    Inquiries are reviewed by our expedition guides within 24
+                    hours.
+                  </p>
+                </div>
+
+                <form id="expeditionBookingForm" class="expedition-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="routeSelect">Sanctuary Route:</label>
+                      <select id="routeSelect" class="form-control" required>
+                        <option value="iceland">
+                          Látrabjarg & Westman Islands (Iceland)
+                        </option>
+                        <option value="scotland">
+                          Isle of May & Treshnish Isles (Scotland)
+                        </option>
+                        <option value="faroe">
+                          Mykines & Streymoy Sea Stacks (Faroe Islands)
+                        </option>
+                        <option value="norway">
+                          Bleik & Runde Bird Cliffs (Norway)
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="seasonSelect">Season & Timing:</label>
+                      <select id="seasonSelect" class="form-control" required>
+                        <option value="spring">
+                          Spring Arrival & Burrow Digging (May)
+                        </option>
+                        <option value="summer" selected>
+                          Peak Chick Rearing & Sandeel Dives (June - July)
+                        </option>
+                        <option value="fledging">
+                          Late Fledging & Night Rescues (August)
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="guestNameInput">Full Name:</label>
+                      <input
+                        type="text"
+                        id="guestNameInput"
+                        class="form-control"
+                        placeholder="Dr. Jordan Ellis"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="guestEmailInput">Email Address:</label>
+                      <input
+                        type="email"
+                        id="guestEmailInput"
+                        class="form-control"
+                        placeholder="jordan.ellis@field.org"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="partySizeInput">Party Size:</label>
+                      <select id="partySizeInput" class="form-control">
+                        <option value="1">1 Explorer (Solo / Research)</option>
+                        <option value="2" selected>2 Explorers</option>
+                        <option value="3-4">3 to 4 Explorers</option>
+                        <option value="5+">
+                          5+ Explorers (Special Research Group)
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="interestSelect">Primary Focus:</label>
+                      <select id="interestSelect" class="form-control">
+                        <option value="photo">
+                          Wildlife Photography & Telephoto Stalking
+                        </option>
+                        <option value="bio">
+                          Ornithology & Colony Research
+                        </option>
+                        <option value="eco">
+                          Coastal Hiking & Eco-Tourism
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="specialNotesInput"
+                      >Special Requirements / Research Notes:</label
+                    >
+                    <textarea
+                      id="specialNotesInput"
+                      class="form-control textarea"
+                      rows="2"
+                      placeholder="e.g. Bringing specialized 600mm telephoto lenses, interested in puffling night patrol..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    id="submitBookingBtn"
+                    class="btn-primary w-full"
+                  >
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <span>Submit Expedition Inquiry</span>
+                  </button>
+                </form>
+
+                <div
+                  id="bookingConfirmationCard"
+                  class="booking-confirmation"
+                  style="display: none"
+                >
+                  <div class="confirm-icon">
+                    <i class="fa fa-check-circle"></i>
+                  </div>
+                  <h4>Expedition Inquiry Registered!</h4>
+                  <p id="confirmMessageText">
+                    Thank you! Your sanctuary expedition request has been
+                    logged. Our lead expedition ornithologist will respond with
+                    field weather protocols and departure dates.
+                  </p>
+                  <button
+                    class="btn-secondary btn-sm"
+                    id="resetBookingFormBtn"
+                    type="button"
+                  >
+                    Submit Another Inquiry
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right: Field Stations & Observatory Info -->
+              <div class="stations-info-card">
+                <div class="stations-header">
+                  <h3>
+                    <i class="fa fa-building-o"></i> Sanctuary Research Stations
+                  </h3>
+                  <span class="status-indicator"
+                    ><i class="fa fa-signal"></i> Active North Atlantic
+                    Grid</span
+                  >
+                </div>
+
+                <div class="station-list">
+                  <div class="station-item" id="stationIceland">
+                    <div class="st-badge">Station 01 • Iceland</div>
+                    <h4 class="st-name">Látrabjarg Marine Station</h4>
+                    <p class="st-coords">
+                      <i class="fa fa-location-arrow"></i> 65°30'13" N,
+                      24°31'54" W • Elevation: 441m
+                    </p>
+                    <p class="st-desc">
+                      Home to Europe’s largest seabird cliff, supporting over
+                      200,000 breeding Atlantic Puffin pairs along a 14km basalt
+                      escarpment.
+                    </p>
+                  </div>
+
+                  <div class="station-item" id="stationScotland">
+                    <div class="st-badge">Station 02 • Scotland</div>
+                    <h4 class="st-name">Isle of May Field Observatory</h4>
+                    <p class="st-coords">
+                      <i class="fa fa-location-arrow"></i> 56°11'08" N, 2°33'27"
+                      W • Firth of Forth
+                    </p>
+                    <p class="st-desc">
+                      Historic British research station conducting 50-year
+                      longitudinal banding and sandeel forage density studies.
+                    </p>
+                  </div>
+
+                  <div class="station-item" id="stationFaroe">
+                    <div class="st-badge">Station 03 • Faroe Islands</div>
+                    <h4 class="st-name">Mykines Western Sea Stack</h4>
+                    <p class="st-coords">
+                      <i class="fa fa-location-arrow"></i> 62°06'10" N, 7°38'42"
+                      W • Atlantic Vanguard
+                    </p>
+                    <p class="st-desc">
+                      Extreme ocean promontory featuring protected footbridge
+                      access and strict seasonal boardwalk zoning.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Ethical Code Callout -->
+                <div class="ethical-guidelines-box">
+                  <div class="ethical-title">
+                    <i class="fa fa-balance-scale"></i> Strict Field Observation
+                    Ethics
+                  </div>
+                  <p>
+                    All visitors maintain a mandatory 5-meter minimum perimeter
+                    from burrows. Flash photography and drone flights over
+                    nesting cliffs are strictly prohibited by international
+                    sanctuary accord.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-nav-actions">
+              <button
+                class="btn-secondary"
+                id="backToTopBtn"
+                type="button"
+                data-target-slide="1"
+              >
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <span>Back to Overview (Slide 1)</span>
+              </button>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!-- Global Fixed Footer Bar -->
+    <footer id="footerWrapper" class="fixed-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span>&copy; 2026 FRATERCULA SANCTUARY INITIATIVE.</span>
+          <span class="footer-sub"
+            >Dedicated to North Atlantic Pelagic Seabird Conservation.</span
+          >
+        </div>
+
+        <div class="footer-status">
+          <span class="status-pill">
+            <i class="fa fa-clock-o"></i> UTC Time:
+            <strong id="liveUtcClock">--:--:--</strong>
+          </span>
+          <span class="status-pill footer-coordinates">
+            <i class="fa fa-map-marker"></i> Grid: 65°N North Atlantic Basin
+          </span>
+        </div>
+
+        <div class="footer-controls">
+          <span class="slide-counter-display" id="slideCounterDisplay"
+            >01 / 04</span
+          >
+          <button
+            id="arrowIcon"
+            class="arrow-btn"
+            type="button"
+            aria-label="Next Section"
+          >
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Field Guide Modal -->
+    <div
+      id="fieldGuideModal"
+      class="modal-overlay"
+      style="display: none"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-pill"
+              ><i class="fa fa-book"></i> Interactive Ornithology Guide</span
+            >
+            <h3 id="modalTitle">
+              The Atlantic Puffin <em>(Fratercula arctica)</em>
+            </h3>
+          </div>
+          <button
+            id="closeModalBtn"
+            class="modal-close-btn"
+            type="button"
+            aria-label="Close Guide"
+          >
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-tabs">
+            <button
+              class="modal-tab active"
+              data-tab="soundboard"
+              id="tabBtnSound"
+            >
+              Acoustic Soundboard
+            </button>
+            <button class="modal-tab" data-tab="anatomy" id="tabBtnAnatomy">
+              Anatomy & Markings
+            </button>
+            <button class="modal-tab" data-tab="calendar" id="tabBtnCalendar">
+              Annual Breeding Cycle
+            </button>
+          </div>
+
+          <!-- Soundboard Tab -->
+          <div id="tabContentSoundboard" class="tab-pane active">
+            <p class="tab-intro">
+              Listen to synthesized acoustic field recordings of Atlantic Puffin
+              colony life using the browser's native audio synthesizer:
+            </p>
+            <div class="sound-card-grid">
+              <div class="sound-card">
+                <div class="sound-info">
+                  <strong>Cliffside Colony Roar & Coastal Wind</strong>
+                  <span
+                    >Continuous ocean swell & thousands of wheeling
+                    puffins</span
+                  >
+                </div>
+                <button class="btn-sound-play" id="playSoundWind" type="button">
+                  <i class="fa fa-play"></i> Play Ocean Ambience
+                </button>
+              </div>
+
+              <div class="sound-card">
+                <div class="sound-info">
+                  <strong>Adult Deep Guttural Growl ("Arr-arr-arr")</strong>
+                  <span
+                    >Low vibrating territorial call inside the nesting
+                    burrow</span
+                  >
+                </div>
+                <button
+                  class="btn-sound-play"
+                  id="playSoundGrowl"
+                  type="button"
+                >
+                  <i class="fa fa-volume-up"></i> Play Vocalization
+                </button>
+              </div>
+
+              <div class="sound-card">
+                <div class="sound-info">
+                  <strong>Hungry Puffling Peep</strong>
+                  <span
+                    >High-pitched chick call begging for sandeel delivery</span
+                  >
+                </div>
+                <button
+                  class="btn-sound-play"
+                  id="playSoundChick"
+                  type="button"
+                >
+                  <i class="fa fa-volume-up"></i> Play Chick Call
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anatomy Tab -->
+          <div id="tabContentAnatomy" class="tab-pane" style="display: none">
+            <div class="anatomy-list">
+              <div class="anatomy-item">
+                <span class="a-badge">Bill Rhamphotheca</span>
+                <p>
+                  Features up to three grooved plates on the red tip. The bill
+                  grows larger and acquires additional vertical ridges as the
+                  bird ages.
+                </p>
+              </div>
+              <div class="anatomy-item">
+                <span class="a-badge">Orbital Ring & Eye Rosette</span>
+                <p>
+                  Crimson eye-ring surrounded by distinctive triangular horny
+                  plates above and below the pupil, giving a soulful expressive
+                  appearance.
+                </p>
+              </div>
+              <div class="anatomy-item">
+                <span class="a-badge">Salt Gland Adaptation</span>
+                <p>
+                  Located directly above the eyes, supraorbital salt glands
+                  extract excess sodium from consumed seawater and concentrated
+                  brine is excreted out through the nares.
+                </p>
+              </div>
+              <div class="anatomy-item">
+                <span class="a-badge">Bright Orange Webbed Feet</span>
+                <p>
+                  Positioned far back on the body for maximum rudder thrust
+                  underwater; equipped with sharp curved talons for burrowing in
+                  tough cliff peat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar Tab -->
+          <div id="tabContentCalendar" class="tab-pane" style="display: none">
+            <div class="calendar-timeline">
+              <div class="timeline-step">
+                <span class="t-month">January - March</span>
+                <strong>Solitary Pelagic Roaming</strong>
+                <p>
+                  Afloat in open Atlantic waters hundreds of kilometers
+                  offshore. Complete wing feather molt renders birds temporarily
+                  flightless.
+                </p>
+              </div>
+              <div class="timeline-step">
+                <span class="t-month">April</span>
+                <strong>Colony Cliff Rendezvous</strong>
+                <p>
+                  Arrival at ancestral sea stacks. Re-bonding between monogamous
+                  mates and energetic excavation of turf burrows.
+                </p>
+              </div>
+              <div class="timeline-step">
+                <span class="t-month">May - June</span>
+                <strong>Single Egg Incubation</strong>
+                <p>
+                  Both male and female share 40-day brood duties, keeping the
+                  precious single egg warm against their brood patch.
+                </p>
+              </div>
+              <div class="timeline-step">
+                <span class="t-month">July - August</span>
+                <strong>Chick Feeding & Night Departure</strong>
+                <p>
+                  Chicks feed continuously on sandeels. After 45 days,
+                  fledglings scramble off the cliffs under cover of darkness to
+                  avoid predatory skuas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="modalCloseActionBtn" class="btn-secondary" type="button">
+            Close Guide
+          </button>
+          <button
+            id="modalBookActionBtn"
+            class="btn-primary"
+            type="button"
+            data-target-slide="4"
+          >
+            Plan an Expedition
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast Element -->
+    <div
+      id="toastNotification"
+      class="toast-popup"
+      style="display: none"
+      role="status"
+      aria-live="polite"
+    >
+      <i id="toastIcon" class="fa fa-check-circle"></i>
+      <span id="toastMessage">Notification message</span>
+    </div>
+
+    <!-- Main Application JavaScript -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

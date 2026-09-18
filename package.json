@@ -1,0 +1,32 @@
+{
+  "name": "landing-page-vertical-slider",
+  "version": "1.0.0",
+  "description": "Landing page with vertical slider and collapsible nav menu",
+  "homepage": "https://github.com/InoreNeronI/landing-page-vertical-slider",
+  "scripts": {
+    "dev": "parcel serve assets/html/index.html --port 3000 --host 0.0.0.0",
+    "build": "parcel build assets/html/index.html --public-url ./",
+    "lint": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InoreNeronI/landing-page-vertical-slider.git"
+  },
+  "keywords": [],
+  "author": "Martin Mozos <martinmozos@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InoreNeronI/landing-page-vertical-slider/issues"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "prettier": "3.1.0"
+  },
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
+  }
+}

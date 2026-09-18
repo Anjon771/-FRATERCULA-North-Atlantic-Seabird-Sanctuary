@@ -1,0 +1,6 @@
+{
+  "name": "Landing Page Vertical Slider",
+  "description": "An immersive North Atlantic wildlife expedition landing page with full-screen vertical slider, interactive colony field guide, acoustic audio synthesizer, and expedition booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
